@@ -2,8 +2,9 @@ const Web3 = require('web3')
 const ContractKit = require("@celo/contractkit")
 const fs = require('fs')
 const path = require('path')
+require('dotenv').config()
 
-const web3 = new Web3('https://celo-alfajores--rpc.datahub.figment.io/apikey/9489d1c2f78eae8149cf49f165ec92e9/')
+const web3 = new Web3(`https://celo-alfajores--rpc.datahub.figment.io/apikey/${process.env.API_KEY}/`)
 const kit = ContractKit.newKitFromWeb3(web3)
 const data = require('./artifacts/contracts/FundMeCharity.sol/FundMe.json')
 const Account = require('./celo_account');
