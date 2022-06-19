@@ -1,5 +1,6 @@
 const Web3 = require('web3')
 const ContractKit = require('@celo/contractkit')
+require('dotenv').config()
 
 const web3 = new Web3(`https://celo-alfajores--rpc.datahub.figment.io/apikey/${process.env.API_KEY}/`)
 
